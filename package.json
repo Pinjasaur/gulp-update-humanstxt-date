@@ -1,0 +1,34 @@
+{
+  "name": "gulp-update-humanstxt-date",
+  "version": "0.1.0",
+  "description": "Update the `last updated` date in a humans.txt file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pinjasaur/gulp-update-humanstxt-date.git"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "humans.txt",
+    "update"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "moment": "^2.17.1",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "author": "Paul Esch-Laurent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pinjasaur/gulp-update-humanstxt-date/issues"
+  },
+  "homepage": "https://github.com/Pinjasaur/gulp-update-humanstxt-date#readme"
+}
