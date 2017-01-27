@@ -10,13 +10,13 @@ With npm (`npm install --save-dev gulp-update-humanstxt-date`) or with Yarn (`ya
 ## Usage
 
 ```js
-const gulp = require('gulp');
-const updateHumanstxtDate = require('gulp-update-humanstxt-date');
+const gulp = require("gulp");
+const updateHumanstxtDate = require("gulp-update-humanstxt-date");
 
-gulp.task('default', () => {
-  gulp.src('src/humans.txt')
+gulp.task("default", () => {
+  gulp.src("src/humans.txt")
     .pipe(updateHumanstxtDate())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest("dist"))
 );
 ```
 
