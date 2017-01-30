@@ -1,6 +1,6 @@
 # gulp-update-humanstxt-date
 
-Update the `last updated` date in a `humans.txt` file.
+Update the `last update` date in a `humans.txt` file.
 
 ## Install
 
@@ -14,7 +14,7 @@ const gulp = require("gulp");
 const updateHumanstxtDate = require("gulp-update-humanstxt-date");
 
 gulp.task("default", () => {
-  gulp.src("src/humans.txt")
+  gulp.src("./humans.txt")
     .pipe(updateHumanstxtDate())
     .pipe(gulp.dest("dist"))
 );
@@ -22,7 +22,7 @@ gulp.task("default", () => {
 
 ## Caveats
 
-As per the [humans.txt standard](http://humanstxt.org/Standard.html), the year needs to be in the format YYYY/MM/DD.
+As per the [humans.txt standard](http://humanstxt.org/Standard.html), the year is expected in the YYYY/MM/DD format.
 
 ## API
 
@@ -32,7 +32,7 @@ As per the [humans.txt standard](http://humanstxt.org/Standard.html), the year n
 
 ##### log
 
-Type: `boolean`<br>
+Type: `Boolean`<br>
 Default: `false`
 
 Log out the previous date and the current date as it will be replaced in `humans.txt`. Useful for debugging.
