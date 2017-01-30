@@ -9,7 +9,7 @@ module.exports = function(options) {
 
   function updateDate(file, options) {
     const now   = moment().format("YYYY/MM/DD"),
-          regex = /Last updated: (\d{4}\/\d{2}\/\d{2})/i,
+          regex = /Last updated?: ?(\d{4}\/\d{2}\/\d{2})/i,
           prev  = regex.exec(file)[1];
 
     if (options.log) {
