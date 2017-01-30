@@ -1,10 +1,18 @@
 # gulp-update-humanstxt-date
 
-Update the `last update` date in a `humans.txt` file.
+> Update the `last update` date in a `humans.txt` file.
 
 ## Install
 
-With npm (`npm install --save-dev gulp-update-humanstxt-date`) or with Yarn (`yarn add --dev gulp-update-humanstxt-date`).
+With npm
+```sh
+npm install --save-dev gulp-update-humanstxt-date
+```
+
+or with Yarn
+```sh
+yarn add --dev gulp-update-humanstxt-date
+```
 
 
 ## Usage

@@ -1,7 +1,7 @@
 {
   "name": "gulp-update-humanstxt-date",
   "version": "0.1.0",
-  "description": "Update the `last updated` date in a humans.txt file.",
+  "description": "Update the `last update` date in a humans.txt file.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -11,8 +11,7 @@
     "url": "git+https://github.com/Pinjasaur/gulp-update-humanstxt-date.git"
   },
   "keywords": [
-    "gulp",
-    "plugin",
+    "gulpplugin",
     "humans.txt",
     "update"
   ],
