@@ -1,4 +1,4 @@
-# gulp-update-humanstxt-date
+# gulp-update-humanstxt-date [![Travis](https://img.shields.io/travis/Pinjasaur/gulp-update-humanstxt-date.svg)](https://github.com/Pinjasaur/gulp-update-humanstxt-date)
 
 > Update the `last update` date in a `humans.txt` file.
 
