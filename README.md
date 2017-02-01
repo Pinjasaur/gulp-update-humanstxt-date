@@ -2,6 +2,7 @@
 
 > Update the `last update` date in a `humans.txt` file.
 
+
 ## Install
 
 With npm
@@ -28,9 +29,15 @@ gulp.task("default", () => {
 );
 ```
 
+
 ## Caveats
 
-As per the [humans.txt standard](http://humanstxt.org/Standard.html), the year is expected in the YYYY/MM/DD format.
+As per the [humans.txt standard](http://humanstxt.org/Standard.html), the year is expected in the _YYYY/MM/DD_ format.
+
+In addition, the general format is expected to be as follows: _Last updated: YYYY/MM/DD_. The tense of "update" can be present (update) or past (updated). Further, the space between the colon (:) and the date is optional.
+
+If you're having trouble, enable logging: `updateHumanstxtDate({ log: true })`. If the issue persists please [let me know](https://github.com/Pinjasaur/gulp-update-humanstxt-date/issues).
+
 
 ## API
 
