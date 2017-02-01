@@ -19,6 +19,18 @@ describe("gulp-update-humanstxt-date tests", () => {
     }));
   });
 
+  it("should not modify the file when no pattern is found", () => {
+    const stream = humanstxt();
+
+    stream.on("data", file => {
+      assert.equal(file.contents.toString(), "blah blah blah");
+    });
+
+    stream.write(new util.File({
+      contents: new Buffer("blah blah blah")
+    }));
+  });
+
   it("should update multiline files", () => {
     const stream = humanstxt();
 

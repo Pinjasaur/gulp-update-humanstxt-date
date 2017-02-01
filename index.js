@@ -20,17 +20,32 @@ module.exports = function(options) {
           //
           //            [1]          [2]    [3]    [4]
           regex = /Last updated?: ?(\d{4}\/\d{2}\/\d{2})/i,
-          prev  = regex.exec(file)[1];
+          exec  = regex.exec(file),
+          // If no match, set `prev` to null
+          prev  = (exec !== null) ? exec[1] : null;
 
+    // Log out relevant info if options.log is set to `true`
     if (options.log) {
-      util.log(
-        `${util.colors.cyan("[gulp-update-humanstxt-date]")} ` +
-        `Found the previous date to be: ${util.colors.red(prev)}. ` +
-        `Replacing with ${util.colors.green(now)}.`
-      );
+      if (!prev) {
+        util.log(
+          `${util.colors.cyan("[gulp-update-humanstxt-date]")} ` +
+          `${util.colors.red("No match was found")}. Verify that it follows the following format: ` +
+          `${util.colors.green("Last update(d): YYYY/MM/DD")}.`
+        );
+      } else {
+        util.log(
+          `${util.colors.cyan("[gulp-update-humanstxt-date]")} ` +
+          `Found the previous date to be: ${util.colors.red(prev)}. ` +
+          `Replacing with ${util.colors.green(now)}.`
+        );
+      }
     }
 
-    file = file.replace(prev, now);
+    // Only replace if there's something to replace...
+    if (prev) {
+      file = file.replace(prev, now);
+    }
+
     return file;
   }
 
