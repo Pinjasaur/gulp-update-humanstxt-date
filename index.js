@@ -5,10 +5,20 @@ const through = require("through2");
 const moment = require("moment");
 
 module.exports = function(options) {
+  // Avoid "cannot get property of `undefined`" type errors
   options = options || {};
 
   function updateDate(file, options) {
     const now   = moment().format("YYYY/MM/DD"),
+          // Regular Expression breakdown:
+          // 1) Match "Last updated: " case in-sensitive
+          //   - The 'd' is optional
+          //   - The space after the colon is optional
+          // 2) Exactly 4 digits followed by a slash
+          // 3) Exactly 2 digits followed by a slash
+          // 4) Exactly 2 digits
+          //
+          //            [1]          [2]    [3]    [4]
           regex = /Last updated?: ?(\d{4}\/\d{2}\/\d{2})/i,
           prev  = regex.exec(file)[1];
 
