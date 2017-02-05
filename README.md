@@ -25,8 +25,8 @@ const updateHumanstxtDate = require("gulp-update-humanstxt-date");
 gulp.task("default", () => {
   gulp.src("./humans.txt")
     .pipe(updateHumanstxtDate())
-    .pipe(gulp.dest("dist"))
-);
+    .pipe(gulp.dest("dist"));
+});
 ```
 
 
