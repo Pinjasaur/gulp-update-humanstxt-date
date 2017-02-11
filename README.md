@@ -55,4 +55,4 @@ Log out the previous date and the current date as it will be replaced in `humans
 
 ## License
 
-MIT © Paul Esch-Laurent
+MIT &copy; Paul Esch-Laurent
