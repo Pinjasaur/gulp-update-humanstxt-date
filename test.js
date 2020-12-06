@@ -70,4 +70,21 @@ describe("gulp-update-humanstxt-date tests", () => {
       )
     }));
   });
+
+  it("should leave unicode unmodified", () => {
+    const stream = humanstxt();
+
+    stream.on("data", file => {
+      assert.equal(
+        file.contents.toString(),
+        `🤘™`
+      );
+    });
+
+    stream.write(new util.File({
+      contents: new Buffer(
+        `🤘™`
+      )
+    }));
+  });
 });
